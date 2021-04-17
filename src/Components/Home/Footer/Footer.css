@@ -1,0 +1,17 @@
+.footer_container {
+  background-color: cornflowerblue;
+  padding: 80px 0;
+  margin-top: 100px;
+}
+.link_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.link_box a {
+  text-decoration: none;
+  color: white;
+}
+.link_box a:hover {
+  color: blue;
+}

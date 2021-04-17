@@ -1,0 +1,13 @@
+.nav_img_box img {
+  width: 15%;
+}
+
+.navbar-brand {
+  width: 20%;
+}
+.navbar-nav .nav-item .nav-link {
+  color: black;
+}
+.navbar-nav .nav-item .nav-link:hover {
+  color: #44b0ed;
+}

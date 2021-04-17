@@ -1,6 +1,16 @@
 .App {
   text-align: center;
 }
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Roboto", sans-serif;
+}
+p,
+a {
+  font-family: "Poppins", sans-serif;
+}
 
 .App-logo {
   height: 40vmin;
