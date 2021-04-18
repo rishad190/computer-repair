@@ -10,7 +10,7 @@ const OrderListData = (props) => {
     const id = data.id;
     const updateData = { statusUpdate, id };
     console.log(data);
-    fetch(`http://localhost:5000/update/${id}`, {
+    fetch(`https://secure-castle-59124.herokuapp.com/update/${id}`, {
       method: "PATCH",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(updateData),

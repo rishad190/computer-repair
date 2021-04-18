@@ -7,7 +7,7 @@ const Manage = () => {
   const [user, setUser] = useContext(UserContext);
   const [manage, setManage] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/showServices")
+    fetch("https://secure-castle-59124.herokuapp.com/showServices")
       .then((res) => res.json())
       .then((data) => {
         setManage(data);

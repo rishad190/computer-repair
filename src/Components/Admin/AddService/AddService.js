@@ -23,7 +23,7 @@ const AddService = () => {
       image: imgValue,
     };
     console.log(productValue);
-    fetch("http://localhost:5000/addServices", {
+    fetch("https://secure-castle-59124.herokuapp.com/addServices", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(productValue),

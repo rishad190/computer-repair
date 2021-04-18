@@ -18,7 +18,7 @@ const Review = () => {
       company: data.company,
       image: user.image,
     };
-    fetch("http://localhost:5000/addReview", {
+    fetch("https://secure-castle-59124.herokuapp.com/addReview", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(reviewStore),

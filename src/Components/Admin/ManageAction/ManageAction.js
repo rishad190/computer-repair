@@ -4,7 +4,7 @@ const ManageAction = (props) => {
   const { title, _id, price } = props.pd;
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/delete/${id}`, {
+    fetch(`https://secure-castle-59124.herokuapp.com/delete/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

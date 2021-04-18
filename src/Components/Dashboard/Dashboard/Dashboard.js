@@ -12,7 +12,7 @@ const Dashboard = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch("http://localhost:5000/showServices")
+    fetch("https://secure-castle-59124.herokuapp.com/showServices")
       .then((res) => res.json())
       .then((data) => {
         const product = data.find((pd) => pd._id === id);

@@ -74,7 +74,7 @@ const SplitForm = ({ product, user }) => {
       card: elements.getElement(CardNumberElement),
     });
     console.log("[PaymentMethod]", payload);
-    fetch("http://localhost:5000/addpayment", {
+    fetch("https://secure-castle-59124.herokuapp.com/addpayment", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payment),

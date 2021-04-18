@@ -8,7 +8,7 @@ const OrderList = () => {
   const [user, setUser] = useContext(UserContext);
   const [payments, setPayments] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/showpayment")
+    fetch("https://secure-castle-59124.herokuapp.com/showpayment")
       .then((res) => res.json())
       .then((data) => {
         setPayments(data);

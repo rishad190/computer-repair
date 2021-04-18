@@ -15,7 +15,7 @@ const MakeAdmin = () => {
       email: data.email,
     };
     console.log(emailValue);
-    fetch("http://localhost:5000/addAdmin", {
+    fetch("https://secure-castle-59124.herokuapp.com/addAdmin", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(emailValue),
