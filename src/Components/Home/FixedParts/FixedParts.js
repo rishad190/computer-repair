@@ -4,7 +4,7 @@ import "./FixedParts.css";
 
 const FixedParts = () => {
   return (
-    <section className="fixed_container">
+    <section id="fixed" className="fixed_container">
       <div className="container">
         <div className="row">
           <div className="col-md-6">

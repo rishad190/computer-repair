@@ -31,6 +31,9 @@ function App() {
             <Route exact path="/">
               <Home></Home>
             </Route>
+            <Route path="/home">
+              <Home></Home>
+            </Route>
             <Route path="/login">
               <Login></Login>
             </Route>
@@ -40,9 +43,9 @@ function App() {
             <Route path="/dashboard/review">
               <Review></Review>
             </Route>
-            <Route path="/dashboard/booking">
+            <PrivateRoute path="/dashboard/booking">
               <Booking></Booking>
-            </Route>
+            </PrivateRoute>
             <Route path="/dashboard/order">
               <OrderList></OrderList>
             </Route>
@@ -54,6 +57,9 @@ function App() {
             </Route>
             <Route path="/dashboard/manage">
               <Manage></Manage>
+            </Route>
+            <Route path="*">
+              <h1>Error</h1>
             </Route>
           </Switch>
         </Router>

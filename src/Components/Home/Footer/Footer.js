@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMapMarkedAlt } from "@fortawesome/free-solid-svg-icons";
 const Footer = () => {
   return (
     <section className="footer_container">
@@ -8,14 +9,14 @@ const Footer = () => {
         <div className="row">
           <div className="col-md-4 text-white">
             <div>
-              <i></i>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloremque corrupti tenetur quo sequi dolor hic!
+                <FontAwesomeIcon icon={faMapMarkedAlt} /> Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. Doloremque corrupti tenetur
+                quo sequi dolor hic!
               </p>
             </div>
           </div>
-          <div className="col-md-2 text-white">
+          <div className="col-md-2 text-white pb-3">
             <h4>Company</h4>
             <div className="link_box">
               <a href="/">Project</a>
@@ -27,7 +28,7 @@ const Footer = () => {
               <a href="/">Submit Listing</a>
             </div>
           </div>
-          <div className="col-md-2 text-white">
+          <div className="col-md-2 text-white pb-3">
             <h4>Quick links</h4>
             <div className="link_box">
               <a href="/">Quick links</a>

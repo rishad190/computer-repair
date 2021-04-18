@@ -37,7 +37,7 @@ const ServicesData = () => {
   }, []);
 
   return (
-    <section className="services_container">
+    <section id="services" className="services_container">
       <div>
         <h3 className="text-center mb-5">SERVICES</h3>
       </div>

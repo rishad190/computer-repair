@@ -8,7 +8,7 @@ const HeaderSlider = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-6">
-            <div className="slider_contain">
+            <div className="slider_contain pb-3">
               <h1>
                 WE ARE SATISFIED <br />
                 WITH OUR WORK

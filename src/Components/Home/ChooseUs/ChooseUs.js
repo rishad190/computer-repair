@@ -57,7 +57,7 @@ const ChooseUs = () => {
         </p>
       </div>
       <div className="container">
-        <div className="row">
+        <div className="row ">
           {chooseUs.map((choice) => (
             <ChooseUsCard key={choice.title} choice={choice}></ChooseUsCard>
           ))}

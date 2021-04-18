@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../../App";
 import logo from "../../../images/logo.png";
@@ -6,6 +6,18 @@ import "./Navbar.css";
 
 const Navbar = () => {
   const [user, setUser] = useContext(UserContext);
+  const [isAdmin, setIsAdmin] = useState(false);
+  useEffect(() => {
+    fetch("http://localhost:5000/isAdmin", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email: user.email }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setIsAdmin(data);
+      });
+  }, [user.email]);
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light ">
@@ -30,17 +42,17 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav m-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link " aria-current="page" href="/home">
+                <Link to="/" className="nav-link ">
                   HOME
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/about">
+                <a className="nav-link" href="#fixed">
                   ABOUT
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/services">
+                <a className="nav-link" href="#services">
                   SERVICES
                 </a>
               </li>
@@ -48,6 +60,18 @@ const Navbar = () => {
                 <a className="nav-link" href="/contact">
                   CONTACT
                 </a>
+              </li>
+              <li className="nav-item">
+                {isAdmin && (
+                  <Link to="/dashboard/order" className="nav-link ">
+                    ADMIN
+                  </Link>
+                )}
+                {user.email && !isAdmin && (
+                  <Link to="/dashboard/booking" className="nav-link ">
+                    DASHBOARD
+                  </Link>
+                )}
               </li>
             </ul>
             <form className="d-flex">
