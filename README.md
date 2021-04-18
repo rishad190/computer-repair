@@ -7,3 +7,5 @@
 5)Admin can manage page from admin panel
 6)Admin can add and remove service from admin panel
 7)Admin can add new admin
+
+side link : https://computerrepair-e4792.web.app/
