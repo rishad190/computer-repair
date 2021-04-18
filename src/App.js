@@ -10,6 +10,7 @@ import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import OrderList from "./Components/Admin/OrderList/OrderList";
 import AddService from "./Components/Admin/AddService/AddService";
 import MakeAdmin from "./Components/Admin/MakeAdmin/MakeAdmin";
+import Manage from "./Components/Admin/Manage/Manage";
 export const UserContext = createContext();
 
 function App() {
@@ -50,6 +51,9 @@ function App() {
             </Route>
             <Route path="/dashboard/makeAdmin">
               <MakeAdmin></MakeAdmin>
+            </Route>
+            <Route path="/dashboard/manage">
+              <Manage></Manage>
             </Route>
           </Switch>
         </Router>

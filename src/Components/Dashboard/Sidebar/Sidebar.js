@@ -32,21 +32,29 @@ const Sidebar = () => {
     <section className="sidebar_container">
       <div className="sidebar_link_box">
         <div className="nav_img_box">
-          <img src={logo} alt="" />
-          <p className="text-white">Computer Repair</p>
+          <Link to="/">
+            <img src={logo} alt="" />
+            <p className="text-white">Computer Repair</p>
+          </Link>
         </div>
-        <Link to="#">
-          <FontAwesomeIcon className="me-2" icon={faShoppingCart} />
-          Book
-        </Link>
-        <Link to="/dashboard/booking">
-          {" "}
-          <FontAwesomeIcon className="me-2" icon={faBook} /> Booking List
-        </Link>
-        <Link to="/dashboard/review">
-          <FontAwesomeIcon className="me-2" icon={faCommentDots} />
-          Review
-        </Link>
+        {!isAdmin && (
+          <div>
+            <Link to="#">
+              <FontAwesomeIcon className="me-2" icon={faShoppingCart} />
+              Book
+            </Link>
+            <br />
+            <Link to="/dashboard/booking">
+              <FontAwesomeIcon className="me-2" icon={faBook} /> Booking List
+            </Link>
+            <br />
+            <Link to="/dashboard/review">
+              <FontAwesomeIcon className="me-2" icon={faCommentDots} />
+              Review
+            </Link>
+          </div>
+        )}
+
         <br />
         {isAdmin && (
           <div>

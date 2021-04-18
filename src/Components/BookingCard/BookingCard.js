@@ -13,7 +13,11 @@ const BookingCard = (props) => {
             Vitae, nostrum.
           </p>
         </div>
-        <div class="card-footer bg-transparent border-success">{status}</div>
+        <div class="card-footer bg-info border-success text-center">
+          <b className=" p-2 bg-primary text-white shadow p-3 mb-5  rounded">
+            {status}
+          </b>
+        </div>
       </div>
     </div>
   );
