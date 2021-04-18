@@ -39,7 +39,7 @@ const Sidebar = () => {
         </div>
         {!isAdmin && (
           <div>
-            <Link to="#">
+            <Link to="/dashboard/book">
               <FontAwesomeIcon className="me-2" icon={faShoppingCart} />
               Book
             </Link>
@@ -76,7 +76,7 @@ const Sidebar = () => {
             <Link to="/dashboard/manage">
               <FontAwesomeIcon className="me-2" icon={faTasks} />
               Manage Services
-            </Link>{" "}
+            </Link>
           </div>
         )}
       </div>

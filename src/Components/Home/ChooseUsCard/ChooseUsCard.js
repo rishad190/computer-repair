@@ -1,9 +1,13 @@
 import React from "react";
+import "./ChooseUsCard.css";
 
 const ChooseUsCard = ({ choice }) => {
   return (
-    <div className="col-md-4 col-sm-12 pb-4 d-flex justify-content-center ">
-      <div className="card  " style={{ width: "18rem", border: "none" }}>
+    <div className="col-md-4 col-sm-12 pb-4 d-flex justify-content-center  ">
+      <div
+        className="card chooseUs_box "
+        style={{ width: "18rem", border: "none" }}
+      >
         <img src={choice.icon} alt="" />
         <div className="card-body">
           <h5 className="card-title">{choice.title}</h5>

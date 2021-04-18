@@ -6,20 +6,10 @@ import "./Navbar.css";
 
 const Navbar = () => {
   const [user, setUser] = useContext(UserContext);
-  const [isAdmin, setIsAdmin] = useState(false);
-  useEffect(() => {
-    fetch("https://secure-castle-59124.herokuapp.com/isAdmin", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email: user.email }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        setIsAdmin(data);
-      });
-  }, [user.email]);
+
   return (
     <div>
+      {}
       <nav className="navbar navbar-expand-lg navbar-light ">
         <div className="container">
           <a className="navbar-brand" href="/home">
@@ -62,16 +52,9 @@ const Navbar = () => {
                 </a>
               </li>
               <li className="nav-item">
-                {isAdmin && (
-                  <Link to="/dashboard/order" className="nav-link ">
-                    ADMIN
-                  </Link>
-                )}
-                {user.email && !isAdmin && (
-                  <Link to="/dashboard/booking" className="nav-link ">
-                    DASHBOARD
-                  </Link>
-                )}
+                <Link to="/dashboard" className="nav-link ">
+                  DASHBOARD
+                </Link>
               </li>
             </ul>
             <form className="d-flex">

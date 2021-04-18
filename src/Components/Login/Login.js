@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import logo from "../../images/logo.png";
 import firebase from "firebase/app";
+import google from "../../images/google.png";
 import "firebase/auth";
 import "./Login.css";
 import firebaseConfig from "../firebase.Config";
@@ -64,8 +65,15 @@ const Login = () => {
       </div>
       <div className="text-center mt-5">
         <h4>Login With</h4>
-        <button onClick={handleLogin} className="mt-5">
-          Continue With Google
+        <button
+          onClick={handleLogin}
+          style={{ border: "none" }}
+          className="mt-5  bg-secondary "
+        >
+          <div className="btn_box p-3">
+            <img src={google} alt="Google" />
+            <p className="ps-3 text-white">Continue with Google</p>
+          </div>
         </button>
       </div>
     </section>
